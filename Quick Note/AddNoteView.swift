@@ -10,6 +10,7 @@ import SwiftUI
 struct AddNoteView: View {
     
     @State private var task = ""
+    @ObservedObject var noteslist : NotesList
     
     var body: some View {
         NavigationView{
@@ -23,7 +24,8 @@ struct AddNoteView: View {
                             .multilineTextAlignment(.center)
                     }
                 Button{
-                    //
+                    noteslist.addNote(task: task)
+                    noteslist.showAddNoteview = false
                 } label: {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width:250,height:50)
@@ -41,11 +43,5 @@ struct AddNoteView: View {
             .padding(35)
             .navigationTitle("Add a note 📝")
         }
-    }
-}
-
-struct AddNoteView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddNoteView()
     }
 }
