@@ -9,14 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(0...3, id: \.self) { note in Text("Hello")}
+                }
+            }
+            .navigationTitle("Notes")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        //
+                    } label: {
+                        Image(systemName: "square.and.pencil" )
+                    }
+                }
+            }
         }
-        .padding()
     }
+}
+
+struct note: Identifiable, Equatable {
+    var id = UUID()
+    var task: String
 }
 
 struct ContentView_Previews: PreviewProvider {

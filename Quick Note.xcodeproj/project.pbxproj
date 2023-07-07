@@ -11,6 +11,7 @@
 		451487572A5853C600607629 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451487562A5853C600607629 /* ContentView.swift */; };
 		451487592A5853C700607629 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 451487582A5853C700607629 /* Assets.xcassets */; };
 		4514875C2A5853C700607629 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4514875B2A5853C700607629 /* Preview Assets.xcassets */; };
+		451487632A58568E00607629 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451487622A58568E00607629 /* AddNoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		451487562A5853C600607629 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		451487582A5853C700607629 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4514875B2A5853C700607629 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		451487622A58568E00607629 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				451487542A5853C600607629 /* Quick_NoteApp.swift */,
 				451487562A5853C600607629 /* ContentView.swift */,
+				451487622A58568E00607629 /* AddNoteView.swift */,
 				451487582A5853C700607629 /* Assets.xcassets */,
 				4514875A2A5853C700607629 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451487632A58568E00607629 /* AddNoteView.swift in Sources */,
 				451487572A5853C600607629 /* ContentView.swift in Sources */,
 				451487552A5853C600607629 /* Quick_NoteApp.swift in Sources */,
 			);
