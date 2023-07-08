@@ -4,13 +4,13 @@
 //
 //  Created by HARDIK SHARMA on 07/07/23.
 //
-
 import SwiftUI
 
 struct AddNoteView: View {
     
     @State private var task = ""
-    @ObservedObject var noteslist : NotesList
+    @ObservedObject var noteslist: NotesList
+    @State private var displayText = "What would you like to add?"
     
     var body: some View {
         NavigationView{
@@ -20,12 +20,16 @@ struct AddNoteView: View {
                     .shadow(color:.gray, radius: 2, x:0, y:2)
                     .foregroundColor(.white)
                     .overlay{
-                        TextField("What would you like to add?", text: $task)
+                        TextField(displayText, text: $task)
                             .multilineTextAlignment(.center)
                     }
                 Button{
-                    noteslist.addNote(task: task)
-                    noteslist.showAddNoteview = false
+                    if task != "" {
+                        noteslist.addNote(task: task)
+                        noteslist.showAddNoteview = false
+                    } else {
+                        displayText = "Enter some text first!"
+                    }
                 } label: {
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width:250,height:50)
