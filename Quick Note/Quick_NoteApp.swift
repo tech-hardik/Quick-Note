@@ -29,13 +29,9 @@ class NotesList: ObservableObject {
 
 @main
 struct Quick_NoteApp: App {
-    
-    @StateObject var noteslist = NotesList()
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(noteslist)
         }
     }
 }
